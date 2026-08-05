@@ -10,7 +10,13 @@
     },
     {
       "src": "backend/api/index.ts",
-      "use": "@vercel/node"
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": [
+          "../node_modules/.prisma/client/**",
+          "../prisma/**"
+        ]
+      }
     }
   ],
   "rewrites": [
