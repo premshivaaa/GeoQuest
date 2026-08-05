@@ -18,8 +18,9 @@ export default function Login() {
       const response = await axios.post(`${API_URL}/auth/guest`);
       setAuth(response.data.token, response.data.user);
       navigate('/');
-    } catch (error) {
-      console.error(error);
+    } catch (error: any) {
+      console.error('Login failed:', error);
+      alert('Error: ' + (error.response?.data?.details || error.message || 'Unknown database error'));
     } finally {
       setIsLoading(false);
     }
