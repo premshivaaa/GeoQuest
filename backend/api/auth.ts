@@ -78,7 +78,7 @@ router.post('/guest', async (req, res) => {
     res.status(201).json({ user: { id: user.id, name: user.name, email: user.email, avatar: user.avatar, level: user.level, xp: user.xp, coins: user.coins, rank: user.rank, accuracy: user.accuracy }, token });
   } catch (error) {
     console.error('Guest login error:', error);
-    res.status(500).json({ error: 'Internal server error' });
+    res.status(500).json({ error: 'Internal server error', details: (error as Error).message });
   }
 });
 
