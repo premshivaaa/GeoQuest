@@ -6,7 +6,7 @@ import useSound from '../hooks/useSound';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, Image as ImageIcon, Heart, Lightbulb, FastForward, Clock } from 'lucide-react';
 
-const API_URL = 'http://localhost:3001/api';
+const API_URL = import.meta.env.PROD ? '/api' : 'http://localhost:3001/api';
 
 interface Question {
   id: string;

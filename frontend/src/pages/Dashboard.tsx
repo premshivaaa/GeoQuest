@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { LogOut, Play, Lock, Star, Trophy } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-const API_URL = 'http://localhost:3001/api';
+const API_URL = import.meta.env.PROD ? '/api' : 'http://localhost:3001/api';
 
 interface Level {
   level: number;

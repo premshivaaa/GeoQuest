@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { Map, User, KeyRound, LogIn } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-const API_URL = 'http://localhost:3001/api'; // In a real app this comes from env
+const API_URL = import.meta.env.PROD ? '/api' : 'http://localhost:3001/api';
 
 export default function Login() {
   const [isLoading, setIsLoading] = useState(false);

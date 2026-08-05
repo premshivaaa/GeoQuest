@@ -4,7 +4,7 @@ import useStore from '../store';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Users, Activity, Trash2 } from 'lucide-react';
 
-const API_URL = 'http://localhost:3001/api';
+const API_URL = import.meta.env.VITE_API_URL || (import.meta.env.PROD ? '/api' : 'http://localhost:3001/api');
 
 export default function Admin() {
   const [users, setUsers] = useState<any[]>([]);
