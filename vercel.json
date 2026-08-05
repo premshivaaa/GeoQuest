@@ -19,8 +19,16 @@
       "destination": "/backend/api/index.ts"
     },
     {
+      "source": "/(assets/.*)",
+      "destination": "/frontend/$1"
+    },
+    {
+      "source": "/(favicon\\.svg|icons\\.svg|hero\\.png)",
+      "destination": "/frontend/$1"
+    },
+    {
       "source": "/(.*)",
-      "destination": "/index.html"
+      "destination": "/frontend/index.html"
     }
   ]
 }
