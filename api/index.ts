@@ -11,10 +11,10 @@ const prisma = new PrismaClient();
 app.use(cors());
 app.use(express.json());
 
-import authRouter from './auth';
-import gameRouter from './game';
-import engagementRouter from './engagement';
-import adminRouter from './admin';
+import authRouter from './_routes/auth';
+import gameRouter from './_routes/game';
+import engagementRouter from './_routes/engagement';
+import adminRouter from './_routes/admin';
 
 // Basic health check route
 app.get('/api/health', (req, res) => {
